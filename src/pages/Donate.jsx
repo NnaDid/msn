@@ -56,7 +56,7 @@ function Donate() {
       </VStack>
     </Box>
   </SimpleGrid>
-   {/* Donation Form */}
+   {/* Donation Form */} 
    <Box mt={8} p={4} bg="white" borderRadius="md" boxShadow="sm">
     <Text fontSize="lg" fontWeight="bold" mb={4}>
       Donate Online

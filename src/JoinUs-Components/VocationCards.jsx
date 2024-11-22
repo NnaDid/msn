@@ -1,9 +1,37 @@
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
+// import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Stack, Icon, SimpleGrid } from "@chakra-ui/react";
+import { CheckCircleIcon } from "@chakra-ui/icons";
 import cross from '../assets/cross.png'
 import Bible from '../assets/Bible.png'
 import jesus from '../assets/jesus.png'
 
 const Vocation = () => {
+  const items = [
+    {
+      image: Bible, // Replace with the actual image link
+      text: "The MSN Vocation is a unique and special one. We consider it a holy vocation or a gift from God.",
+    },
+    {
+      image: cross, // Replace with the actual image link
+      text: "No one is worthy to embrace this unique call whereby one devotes one’s entire life to the service of humanity, all exclusively to the glory of God.",
+    },
+    {
+      image: jesus, // Replace with the actual image link
+      text: "We do not seek to satisfy our own personal interests; we are committed to giving boundless services to the poor and the needy.",
+    },
+    {
+      image: jesus, // Replace with the actual image link
+      text: "We try to imitate the priesthood of Jesus Christ, which is one characterized by service and sacrifice.",
+    },
+    {
+      image: jesus, // Replace with the actual image link
+      text: "If you feel called to become a priest for people, and not for yourself, and you want to learn more about the uniqueness of our MSN vocation, please feel free to contact our vocations coordinator at msnvocations@gmail.com.",
+    },
+    {
+      image: jesus, // Replace with the actual image link
+      text: "God bless you abundantly as you come zealously and enthusiastically to partake in this so noble a mission that Christ has entrusted to us.",
+    },
+  ];
   return (
     <Box p={8} bg="white" color="black">
       {/* Header */}
@@ -11,131 +39,35 @@ const Vocation = () => {
         Vocation
       </Text>
 
-      {/* Cards Container */}
-    <Flex justify="space-around" wrap="wrap">
-      {/* Card 1: A Holy Calling */}
-      <Box
-        bg="white"
-        borderWidth="1px"
-        borderRadius="md"
-        overflow="hidden"
-        boxShadow="md"
-        maxW="sm"
-        width="100%"
-        p={0} // Remove padding to make full use of space
-        mb={4}
-      >
-        <Flex direction="column" height="100%">
-          {/* Image Section */}
-          <Box width="100%" height="50%">
-            <Image
-              src={Bible} // Replace with the actual image link
-              alt="A Holy Calling"
-              w="100%"
-              h="100%"
-              objectFit="cover"
-            />
-          </Box>
-          {/* Text Section */}
+      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
+        {items.map((item, index) => (
           <Flex
-            direction="column"
-            align="center"
-            justify="center"
+            key={index}
+            bg="white"
             p={4}
-            height="50%"
+            borderRadius="md"
+            boxShadow="md"
+            align="center"
           >
-            <Text fontSize="xl" fontWeight="bold" color="purple.700" mb={2}>
-              A Holy Calling
-            </Text>
-            <Text fontSize="sm" color="gray.600" textAlign="center">
-              This is the vocation to act upon God’s call, allowing God’s Spirit to work through us. Our holy calling encourages us to respond in joy as God's instrument of peace and love.
-            </Text>
-          </Flex>
-        </Flex>
-      </Box>
+            {/* Thumbnail */}
+            <Box boxSize="40px" mr={4}>
+            <Icon as={CheckCircleIcon} 
+                 color="purple.500" 
+                 mr={2}  
+                 boxSize="40px"
+                 objectFit="cover"
+            /> 
+            </Box>
 
-      {/* Card 2: Devoted to God's Glory */}
-      <Box
-        bg="white"
-        borderWidth="1px"
-        borderRadius="md"
-        overflow="hidden"
-        boxShadow="md"
-        maxW="sm"
-        width="100%"
-        p={0} // Remove padding to make full use of space
-        mb={4}
-      >
-        <Flex direction="column" height="100%">
-          {/* Image Section */}
-          <Box width="100%" height="50%">
-            <Image
-              src={cross} // Replace with the actual image link
-              alt="Devoted to God's Glory"
-              w="100%"
-              h="100%"
-              objectFit="cover"
-            />
-          </Box>
-          {/* Text Section */}
-          <Flex
-            direction="column"
-            align="center"
-            justify="center"
-            p={4}
-            height="50%"
-          >
-            <Text fontSize="xl" fontWeight="bold" color="purple.700" mb={2}>
-              Devoted to God's Glory
-            </Text>
-            <Text fontSize="sm" color="gray.600" textAlign="center">
-              We seek those who dedicate their lives entirely to glorify God, aligning their actions to divine purposes and priorities.
-            </Text>
+            {/* Text Section */}
+            <Box> 
+              <Text fontSize="lg" color="gray.600" textAlign={'justify'} fontWeight={'400'}>
+                {item.text}
+              </Text>
+            </Box>
           </Flex>
-        </Flex>
-      </Box>
-
-      {/* Card 3: Serving in Christ’s Example */}
-      <Box
-        bg="white"
-        borderWidth="1px"
-        borderRadius="md"
-        overflow="hidden"
-        boxShadow="md"
-        maxW="sm"
-        width="100%"
-        p={0} // Remove padding to make full use of space
-        mb={4}
-      >
-        <Flex direction="column" height="100%">
-          {/* Image Section */}
-          <Box width="100%" height="50%">
-            <Image
-              src={jesus} // Replace with the actual image link
-              alt="Serving in Christ’s Example"
-              w="100%"
-              h="100%"
-              objectFit="cover"
-            />
-          </Box>
-          {/* Text Section */}
-          <Flex
-            direction="column"
-            align="center"
-            justify="center"
-            p={4}
-            height="50%"
-          >
-            <Text fontSize="xl" fontWeight="bold" color="purple.700" mb={2}>
-              Serving in Christ’s Example
-            </Text>
-            <Text fontSize="sm" color="gray.600" textAlign="center">
-              We seek those who feel called to serve humbly, following Christ's example by placing others first and leading with compassion and love.
-            </Text>
-          </Flex>
-        </Flex>
-      </Box>
-    </Flex>
+        ))}
+      </SimpleGrid>
     </Box>
   );
 };

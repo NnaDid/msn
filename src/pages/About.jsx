@@ -18,19 +18,16 @@ const AboutUs = () => {
         <Heading size="lg" color="msn.400">About Us</Heading>
        <Flex spacing={4} mt={8} justifyContent='space-between' alignItems='center'>
         <Box textAlign={'justify'} w={{base:'100%',md:'70%'}}>
-            <Text>
-                The Missionary Servants of the Needy (MSN) is a Roman Catholic group
-                dedicated to helping the poor. To join us, members must truly want to 
-                serve those in need and view their role as a chance to help, rather than
-                to gain honor or wealth. This means being ready to give up personal
-                comforts for the sake of others. 
+            <Text fontSize="md" textAlign="justify" mb={4}>
+                The Missionary Servants of the Needy (MSN) is a Roman Catholic male religious association founded exclusively to help the poor and serve their needs. Anyone who wishes to participate in this so divinely motivated mission must inculcate a burning desire for working with the most disadvantaged members of society. He must see the priesthood of Jesus Christ and apostolic life from the perspective of service, not acquisition of honor and/or wealth.
             </Text>
-             <Text>&nbsp;</Text>
-            <Text>
-              In Scripture, Christ’s compassion for the poor is clear in 
-              Matthew 14:13-21 and John 6:1-13. The Missionary Servants 
-              of the Needy emulate this care by addressing suffering and serving 
-              as “another Christ,” grounded in God’s Word and the Sacraments.
+             
+            <Text fontSize="md" textAlign="justify" mb={4}>
+                 Our mission is primarily centered on our special concern for the poor and the less privileged, especially those who are given little or zero attention in their immediate communities. Our mission is to help this class of people reinstate their sense of value and become more cognizant of their relevance to human society, to themselves, their families, and to God. Making visible and practical God’s Love and Mercy through Works of Charity and Corporal Works of Mercy is the major ingredient of our mission. Our utmost and ever-burning desire is to be the mouthpiece of God and "another Christ" to the poor and less-privileged.
+            </Text>
+
+            <Text fontSize="md" textAlign="justify" mb={4}>
+                 Christ, on different occasions, in the scripture, identifies ceaselessly with the poor and the neglected ones, and shows unquantifiable and relentless concern for their wellbeing. For instance, in Matthew 14:13-21, 15:32-38; Mark 6:32-44; Luke 9:10-17, John 6:1-13, and some other similar passages in the scripture, Jesus’ compassionate concern for the hungry is astoundingly obvious. These texts unanimously highlight how Our Lord Jesus Christ, moved with love, compassion, and mercy, attended to the needs of the hungry. Imitating zealously and relentlessly Jesus’ compassionate attitude towards the hungry, we endeavor to pay uninterrupted attention to the needs of the poor. We want to be “another Christ” to them, be their brothers and friends and the channel through which they can encounter God’s love. The Word of God and the rich sacraments and tradition of the Church are the very summit of our spirituality.
             </Text>
         </Box>
         <Image
@@ -43,7 +40,7 @@ const AboutUs = () => {
 
       {/* Our Mission Section */}
       <Box bg="msn.400" p={6} mt={10} mx={0} w="100%">
-        <Heading size="lg" mb={4} textAlign="center" color="white">Our Mission</Heading>
+        <Heading size="lg" mb={4} textAlign="center" color="white">Our Mission/Charism</Heading>
 
         {/* First Card */}
         <SimpleGrid columns={1} spacing={10} borderRadius="md" w="100%">
@@ -53,7 +50,7 @@ const AboutUs = () => {
             boxShadow="md" 
             display="flex" 
             flexDirection={{ base: "column", md: "row" }} 
-            h={{ base: "auto", md: "40vh" }}
+            h={{ base: "auto", md: "70vh" }}
             w="100%"
             overflow="hidden"
           >
@@ -80,10 +77,11 @@ const AboutUs = () => {
               <Heading size="md" mb={2} textAlign={{ base: "center", md: "left" }}>
                 Fundamental Charism
               </Heading>
-              <Text textAlign={{ base: "center", md: "left" }}>
-                Our mission is to embody the Holy Priesthood of Jesus Christ through sanctity and service to the
-                poor, striving to save souls. Inspired by Matthew 28:16-20, we strive to make disciples and bring
-                salvation through charity and service to the marginalized.
+              <Text textAlign={{ base: "center", md: "left" }} mb={4}>
+                Our fundamental mission or charism is to seek to sanctify ourselves as priests of apostolic life by conforming our priestly life to the priesthood of Jesus Christ, in a mission of shared charity according to the norms of our Constitutions and apostolate, thereby fulfilling the original intention of Christ to save the greatest number of souls and paying an uninterrupted attention to the needs of the poor and the less-privileged.
+              </Text>
+              <Text textAlign={{ base: "center", md: "left" }}> 
+                In summary, our charism is summed up in our mission statement: To live the Holy Priesthood of Jesus Christ in sanctity, seeking to save souls by being of service to the poor and underprivileged. Jesus drew near and spoke to them saying: “All power in heaven and on earth has been given to me. Go therefore and make disciples of all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Spirit, teaching them to observe all that I have commanded you, and behold, I am with you all days, even to the consummation of the world” (Matthew 28:16-20). Our mission then is to fulfill this original intention of Christ, and to do everything possible for the salvation of the greatest number 
               </Text>
             </Flex>
           </Box>
@@ -97,7 +95,7 @@ const AboutUs = () => {
             boxShadow="md" 
             display="flex" 
             flexDirection={{ base: "column", md: "row" }} 
-            h={{ base: "auto", md: "40vh" }}
+            h={{ base: "auto", md: "50vh" }}
             w="100%"
             overflow="hidden"
           >
@@ -122,12 +120,18 @@ const AboutUs = () => {
               order={{ base: 2, md: 0 }}
             >
               <Heading size="md" mb={2} textAlign={{ base: "center", md: "left" }}>
-                Our Mission
+                Our Spiritual Mission
               </Heading>
-              <Text textAlign={{ base: "center", md: "left" }}>
-                Our mission is to embody the Holy Priesthood of Jesus Christ through sanctity and service to the
-                poor, striving to save souls. Inspired by Matthew 28:16-20, we strive to make disciples and bring
-                salvation through charity and service to the marginalized.
+              <Text textAlign={ "justify"} mb={4}>
+                In fulfilling the mission entrusted to us by Christ, we are committed to intense prayers and meditation. 
+                We believe that praying together will enhance our spiritual bonding as brothers aiming at the same mission.
+                We are committed to praying for ourselves and the entire faithful worldwide, especially the poor and the needy that we serve. 
+              </Text>
+              <Text textAlign={ "justify"}>
+                Prayer is therefore the primary ingredient of our day. 
+                We strive to become an apostolic society in which we support each other and all other priests and religious as we work together as a theme to fulfill our mission. 
+                Our study, our prayer, and our community life are all focused on our mission to be servants of humanity. 
+                We stress the universal call to holiness and help people to open themselves to contemplation.
               </Text>
             </Flex>
           </Box>

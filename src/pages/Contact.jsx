@@ -27,6 +27,7 @@ const ContactPage = () => {
         <Text mt={4}>Any question or remarks? Just write us a message!</Text>
       </Box>
 
+
       {/* Main Container for Contact Information and Form */}
       <Flex justify="center" align="center" py={8} wrap="wrap">
         <Box
@@ -36,11 +37,11 @@ const ContactPage = () => {
           rounded="md"
           borderWidth="1px"
           boxShadow="lg"
-          display="flex"
-          flexDirection={{ base: 'column', md: 'row' }}
         >
+          
           {/* Contact Information Box */}
-          <Box
+          <Box   display="flex"   flexDirection={{ base: 'column', md: 'row' }}>
+           <Box
             w={{ base: '100%', md: '45%' }}
             p={8}
             bg="msn.400"
@@ -60,7 +61,7 @@ const ContactPage = () => {
               </HStack>
               <HStack>
                 <Icon as={FaEnvelope} />
-                <Text>msnvocations@gmail.com</Text>
+                <Text>msnvocations@gmail.com or info@msnmission.org </Text>
               </HStack>
               <HStack>
                 <Icon as={FaMapMarkerAlt} />
@@ -89,58 +90,7 @@ const ContactPage = () => {
             rounded="md"
             borderWidth="1px"
             boxShadow="sm"
-          >
-            {/* <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
-              <FormControl id="first-name">
-                <FormLabel fontSize="sm">First Name</FormLabel>
-                <Input type="text" variant="flushed" placeholder="First Name" />
-              </FormControl>
-              <FormControl id="last-name">
-                <FormLabel fontSize="sm">Last Name</FormLabel>
-                <Input type="text" variant="flushed" placeholder="Last Name" />
-              </FormControl>
-            </SimpleGrid>
-
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} mt={4}>
-              <FormControl id="email">
-                <FormLabel>Email</FormLabel>
-                <Input type="email" variant="flushed" placeholder="Email Address" />
-              </FormControl>
-              <FormControl id="phone">
-                <FormLabel>Phone Number</FormLabel>
-                <Input type="tel" variant="flushed" placeholder="Phone Number" />
-              </FormControl>
-            </SimpleGrid>
-
-            <FormControl id="subject" mt={4}>
-              <FormLabel>Select Subject</FormLabel>
-              <RadioGroup defaultValue="general">
-                <Stack direction={{ base: "column", md: "row" }} spacing={4}>
-                  <Radio value="general">General Inquiry</Radio>
-                  <Radio value="join">Join Us</Radio>
-                  <Radio value="help">Need Help</Radio>
-                </Stack>
-              </RadioGroup>
-            </FormControl>
-
-
-            <FormControl id="message" mt={4}>
-              <FormLabel>Message</FormLabel>
-              <Textarea placeholder="Write your message..." variant="flushed" />
-            </FormControl>
-
-            <Flex justify="flex-end">
-              <Button
-                bgColor="blue"
-                color="white"
-                mt={6}
-                width={{ base: "100%", md: "50%" }} // 100% width on mobile, 50% on larger screens
-                
-              >
-                Send Message
-              </Button>
-            </Flex> */}
-
+          > 
             <Box 
               as="iframe"
               src={'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.1458650640707!2d28.399678074978464!3d4.567793595406743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x173ff1837aabd975%3A0x34d356738c9da386!2sWestern%20Equatoria%20State!5e0!3m2!1sen!2sng!4v1730918425884!5m2!1sen!2sng'}
@@ -154,8 +104,66 @@ const ContactPage = () => {
               overflow="hidden"
             /> 
           </Box>
+          </Box>
+
+
+           <Box width={'100%'} p={10}>
+              <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>
+                  <FormControl id="first-name">
+                    <FormLabel fontSize="sm">First Name</FormLabel>
+                    <Input type="text" variant="outline" placeholder="First Name" />
+                  </FormControl>
+                  <FormControl id="last-name">
+                    <FormLabel fontSize="sm">Last Name</FormLabel>
+                    <Input type="text" variant="outline" placeholder="Last Name" />
+                  </FormControl>
+          </SimpleGrid>
+
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4} mt={4}>
+            <FormControl id="email">
+              <FormLabel>Email</FormLabel>
+              <Input type="email" variant="outline" placeholder="Email Address" />
+            </FormControl>
+            <FormControl id="phone">
+              <FormLabel>Phone Number</FormLabel>
+              <Input type="tel" variant="outline" placeholder="Phone Number" />
+            </FormControl>
+          </SimpleGrid>
+
+          <FormControl id="subject" mt={4}>
+            <FormLabel>Select Subject</FormLabel>
+            <RadioGroup defaultValue="general">
+              <Stack direction={{ base: "column", md: "row" }} spacing={4}>
+                <Radio value="general">General Inquiry</Radio>
+                <Radio value="join">Join Us</Radio>
+                <Radio value="help">Need Help</Radio>
+              </Stack>
+            </RadioGroup>
+          </FormControl>
+
+
+          <FormControl id="message" mt={4}>
+            <FormLabel>Message</FormLabel>
+            <Textarea placeholder="Write your message..." variant="outline" />
+          </FormControl>
+
+          <Flex justify="flex-end">
+            <Button
+              bgColor="blue"
+              color="white"
+              mt={6}
+              width={{ base: "100%", md: "50%" }} // 100% width on mobile, 50% on larger screens
+              
+            >
+              Send Message
+            </Button>
+          </Flex>
+          </Box>
+
         </Box>
+
       </Flex>
+
     </Box>
   );
 };

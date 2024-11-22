@@ -34,7 +34,7 @@ function App() {
           transition={{ duration: 1 }}
         >
           <Heading as="h1" size={{ base: "lg", md: "2xl" }} mb={4} mt={{ base: "2", md: "0" }} color="white">
-            Transforming lives through <br /> compassionate service
+            THE MISSIONARY SERVANTS OF THE NEEDY (MSN)
           </Heading>
           <Text
             fontSize={{ base: "md", md: "xl" }}
@@ -43,7 +43,7 @@ function App() {
             fontFamily="fonts.heading"
             fontWeight="bold"
           >
-            The Missionary Servants of the Needy empower hope and uplift communities in need.
+           (Serving the Poor and the Less Privileged) 
           </Text>
           <Button as={Link} mb={{ base: "5", md: "0" }} to="/join-us" size="lg" variant="ghost" color="white" outlineColor="blue.400">
             Join Us
@@ -97,18 +97,10 @@ function App() {
             Who We Are
           </Heading>
           <Text fontSize="md" textAlign="justify">
-            The Missionary Servants of the Needy (MSN)
-            is a Roman Catholic male religious association founded 
-            exclusively to help the poor and serve their needs. Anyone 
-            who wishes to participate in this so divinely motivated
-            mission or become a member of the Missionary Servants
-            of the Needy must, as a matter of fact, inculcate a burning
-            desire for working with the poor and the needy. He must 
-            see the priesthood of Jesus Christ and apostolic life from
-            the perspective of service, not acquisition of honor and/or
-            wealth. He must be deeply committed to sacrificing
-            a greater part of his material and spiritual possessions 
-            for the good of the most disadvantaged people.
+             The Missionary Servants of the Needy (MSN) is a Roman Catholic male religious association founded exclusively to help the poor and serve their needs. Anyone who wishes to participate in this so divinely motivated mission must inculcate a burning desire for working with the most disadvantaged members of society. He must see the priesthood of Jesus Christ and apostolic life from the perspective of service, not acquisition of honor and/or wealth.
+          </Text>
+          <Text fontSize="md" textAlign="justify">
+             Our mission is primarily centered on our special concern for the poor and the less privileged, especially those who are given little or zero attention in their immediate communities. Our mission is to help this class of people reinstate their sense of value and become more cognizant of their relevance to human society, to themselves, their families, and to God. Making visible and practical God’s Love and Mercy through Works of Charity and Corporal Works of Mercy is the major ingredient of our mission. Our utmost and ever-burning desire is to be the mouthpiece of God and "another Christ" to the poor and less-privileged.
           </Text>
         </VStack>
 

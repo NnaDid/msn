@@ -15,6 +15,7 @@ import Footer from './components/Footer';
 
 
 import theme from './theme';
+import SuccessMessage from './pages/Success';
 
 function App() { 
 
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} /> 
                 <Route path="/donate" element={<Donate />} /> 
                 <Route path="/support" element={<Support />} /> 
+                <Route path="/success" element={<SuccessMessage />} /> 
               </Routes> 
             <Footer />
           </Router> 

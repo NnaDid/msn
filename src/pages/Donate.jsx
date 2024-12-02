@@ -1,8 +1,41 @@
-import React from 'react'
-import {  Box, Text, Heading, VStack, SimpleGrid, Button, Input } from "@chakra-ui/react";
+import React, { useState } from "react";
+import { loadStripe } from "@stripe/stripe-js"; 
+import {  Box, Text, Heading, VStack, SimpleGrid, Button, Input, useToast } from "@chakra-ui/react";
 import children2 from '../assets/children2.png'
 
+
+
+
 function Donate() {
+  // const stripePromise = loadStripe("pk_test_51QLCDxFzVltAvv5X2Iiqn2s35u98ybH3UBMQnxoNMWmncoY6aXcphBpua1eyL9i49iW1pC1YESLiFtHxRvDQLsiH00UyEZHmQW");
+
+  const [amount, setAmount] = useState(0);
+  const toast = useToast();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!amount || amount <= 0) {
+        toast({
+            title: "Invalid amount",
+            description: "Please enter a valid donation amount.",
+            status: "error",
+            duration: 3000,
+            isClosable: true,
+        });
+        return;
+    }
+    location.href = "https://msnmission.org/msnapi/?amount="+amount
+
+        // toast({
+        //     title: "Error",
+        //     description: "Failed to create Stripe session.",
+        //     status: "error",
+        //     duration: 3000,
+        //     isClosable: true,
+        // });
+    
+};
+
   return (
     
     <Box
@@ -61,21 +94,17 @@ function Donate() {
     <Text fontSize="lg" fontWeight="bold" mb={4}>
       Donate Online
     </Text>
-    <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        // Handle Stripe Payment here 
-        alert("Donation submitted")
-      }}
-    >
+    <form onSubmit={handleSubmit}  >
       <VStack spacing={4}>
         {/* Input for Donation Amount */}
         <Input
           type="number"
           placeholder="Enter Amount (e.g., 50)"
+          onChange={(e) => setAmount(e.target.value) }
           size="lg"
           required
           bg="gray.50"
+          name="amount"
         />
         {/* Stripe Donate Button */}
         <Button
@@ -85,7 +114,7 @@ function Donate() {
           width="full"
           _hover={{ bg: "blue.600" }}
         >
-          Donate with Stripe
+          Donate 
         </Button>
       </VStack>
     </form>

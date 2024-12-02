@@ -110,8 +110,8 @@ function App() {
           </Heading>
           <Text fontSize="md" textAlign="justify">
             Our mission is to serve those in need with unwavering
-            compassion and hope. strive to uplift lives by providing 
-            essential resources and support. dedicated outreach,
+            compassion and hope; we strive to uplift lives by providing 
+            essential resources and support. Through our dedicated outreach,
             we create lasting change in the communities we serve.
             Together, we can make a meaningful difference for
             the vulnerable and neglected.

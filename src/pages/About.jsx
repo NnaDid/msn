@@ -50,7 +50,7 @@ const AboutUs = () => {
             boxShadow="md" 
             display="flex" 
             flexDirection={{ base: "column", md: "row" }} 
-            h={{ base: "auto", md: "70vh" }}
+            h={{ base: "auto", md: "75vh" }}
             w="100%"
             overflow="hidden"
           >
@@ -74,7 +74,7 @@ const AboutUs = () => {
               p={6}
               order={{ base: 2, md: 1 }}
             >
-              <Heading size="md" mb={2} textAlign={{ base: "center", md: "left" }}>
+              <Heading size="md" mb={2} pt={4} textAlign={{ base: "center", md: "left" }}>
                 Fundamental Charism
               </Heading>
               <Text textAlign={{ base: "center", md: "left" }} mb={4}>
@@ -95,7 +95,7 @@ const AboutUs = () => {
             boxShadow="md" 
             display="flex" 
             flexDirection={{ base: "column", md: "row" }} 
-            h={{ base: "auto", md: "50vh" }}
+            h={{ base: "auto", md: "65vh" }}
             w="100%"
             overflow="hidden"
           >
@@ -150,7 +150,7 @@ const AboutUs = () => {
       {/* Our Apostolate Section */}
       <Box mt={10}>
         <Heading size="lg" mb={4} color="msn.400">Our Apostolate</Heading>
-        <SimpleGrid columns={2} spacing={8}>
+        <SimpleGrid columns={{ base:1, md:2}} spacing={8}>
           {/* Card 1 */}
           <Box bg="white" shadow="md">
             <Flex>  
@@ -182,7 +182,7 @@ const AboutUs = () => {
           {/* Card 3 */}
           <Box bg="white" shadow="md">
           <Flex>  
-             <Image  src={Youth} alt="Charism image" h="100%"  w="35%" objectFit="cover"  />
+             <Image  src={Youth} alt="Charism image" h="100%"  w="35%" objectFit="contain"  />
               <Box padding={4} justifyContent={'center'} alignItems={'center'}>
             <Heading size="md" color="msn.400">Youth Apostolate</Heading>
             <Text mt={2} textAlign={'left'}>

@@ -7,34 +7,58 @@ import children2 from '../assets/children2.png'
 
 
 function Donate() {
-  // const stripePromise = loadStripe("pk_test_51QLCDxFzVltAvv5X2Iiqn2s35u98ybH3UBMQnxoNMWmncoY6aXcphBpua1eyL9i49iW1pC1YESLiFtHxRvDQLsiH00UyEZHmQW");
-
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!amount || amount <= 0) {
-        toast({
-            title: "Invalid amount",
-            description: "Please enter a valid donation amount.",
-            status: "error",
-            duration: 3000,
-            isClosable: true,
-        });
-        return;
-    }
-    location.href = "https://msnmission.org/msnapi/?amount="+amount
+    const numericAmount = parseFloat(amount);
 
-        // toast({
-        //     title: "Error",
-        //     description: "Failed to create Stripe session.",
-        //     status: "error",
-        //     duration: 3000,
-        //     isClosable: true,
-        // });
-    
-};
+    if (!numericAmount || numericAmount <= 0) {
+      toast({
+        title: "Invalid amount",
+        description: "Please enter a valid donation amount.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+      return;
+    }
+
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("/api/create-checkout-session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ amount: numericAmount }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to create Stripe checkout session.");
+      }
+
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        throw new Error("No checkout URL received.");
+      }
+    } catch (error) {
+      toast({
+        title: "Checkout Error",
+        description: error.message || "Unable to proceed to payment.",
+        status: "error",
+        duration: 4000,
+        isClosable: true,
+      });
+      setIsLoading(false);
+    }
+  };
 
   return (
     
@@ -112,6 +136,8 @@ function Donate() {
           colorScheme="blue"
           size="lg"
           width="full"
+          isLoading={isLoading}
+          loadingText="Redirecting to Checkout..."
           _hover={{ bg: "blue.600" }}
         >
           Donate 

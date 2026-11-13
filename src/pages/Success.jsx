@@ -25,7 +25,7 @@ const SuccessMessage = ({ onGoBack }) => {
         </Text>
         <Button 
                as={Link} 
-               to={'https://msnmission.org/'}  
+               to={'/'}  
                onClick={onGoBack}
                colorScheme="blue"
                size="lg"
